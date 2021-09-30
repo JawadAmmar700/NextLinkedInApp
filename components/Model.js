@@ -12,7 +12,9 @@ const Model = ({ open, posts, loading }) => {
     const user = useSelector(State => State.User)
 
     const handleImage = (e) => {
-        setImg(e.target.files[0].name)
+         setImg(URL.createObjectURL(e.target.files[0]))
+        console.log(img)
+        // setImg(e.target.files[0].name)
     }
     const Video = (e) => {
         setVideo(e.target.value)
@@ -59,7 +61,7 @@ const Model = ({ open, posts, loading }) => {
                 {
                     openImg && <div className="p-5 flex items-center justify-between">
                         <input type="file" accept="image/*" onChange={handleImage} name="" id="" />
-                        <img className="w-24 h-24" src={`/images/${img ? img : 'user.svg'}`} alt="" />
+                        <img className="w-24 h-24" src={img} alt="" />
                     </div>
                 }
                 {

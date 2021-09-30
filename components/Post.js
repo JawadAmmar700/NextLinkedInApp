@@ -19,7 +19,7 @@ const Post = ({ post }) => {
             </div>
             {
                 src ?
-                    <img src={`/images/${src}`} className="mb-6 relative left-2/4 border border-yellow-400 transform -translate-x-2/4 w-full h-80" alt="" />
+                    <img src={src} className="mb-6 relative left-2/4 border border-yellow-400 transform -translate-x-2/4 w-full h-80" alt="" />
                     :
                     <div className="w-full h-80">
 
